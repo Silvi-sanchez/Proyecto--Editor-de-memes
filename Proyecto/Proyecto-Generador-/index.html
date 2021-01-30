@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Practica proyecto</title>
+</head>
+<body class="cambiarModoOscuro">
+
+
+    <!-------------COMIENZO HEADER------------->
+  <header class="contenedor-header">
+    <h1 class="titulo-header">Generador de memes</h1>
+    <div class="contenedor-botones">
+      <button class="boton-header" id="boton-texto" onclick="ocultarMostrarImagen()" aria-label="columna imagen"><i class="fa fa-image"></i> Imagen</button>
+      <button class="boton-header" id="boton-imagen" onclick="ocultarMostrarTexto()" aria-label="columna texto"><i class="fa fa-font"></i> Texto</button>
+      <button class="boton-header modo-oscuro" id="modo-oscuro" onclick="cambioAModoOscuro()" aria-label="cambiar a modo oscuro"><i class="fa fa-moon"></i> Modo oscuro</button>
+      <button class="boton-header modo-claro" id="modo-claro" onclick="cambioAModoClaro()" aria-label="cambiar a modo claro"><i class="fa fa-sun"></i> Modo claro</button>
+    </div>
+  </header>
+    <!-------------FIN DE HEADER------------->
+
+
+  <section class="principio-main">
+    <!-------------COMIENZO MAIN------------->
+    <main class="caja-principal">
+      <section class="caja-seccion">
+        <article id="primer-texto" class="primer-texto">TOP TEXT</article>
+        <article id="centro-texto" class="centro-imagen"></article>
+        <article id="segundo-texto" class="segundo-texto">BOTTOM TEXT</article>
+      </section>
+      <button class="boton-header-descargar" aria-label="descargar meme"><i class="fas fa-arrow-circle-down"></i> Descargar meme</button>
+    </main>
+    
+    <!-------------FIN DE MAIN------------->
+
+    <!-------------COMIENZO COLUMNA IMG------------->
+    <aside class="columna-img" id="columna-img" onclick="mostrarColumnaImg()">
+        <h2 class="titulo-aside-img">IMAGEN</h2>
+        
+        <div class="div-aside-img">
+          <h3 class="titulo-url-img" id="url-img">URL</h3>
+          <input type="text" class="url-img" id="urlImg" aria-label="URL de imagen">
+        </div>
+        
+        <div class="fondo">
+        <h3 class="color-fondo-url">FONDO</h3>
+        <div class="div-color-fondo">
+          <div class="div-columna-color">
+            <input type="color" id="input-colores" value="#ffffff">
+            <span id="spanColores" aria-hidden="true">#FFFFFF</span>
+          </div>
+
+        <div class="div-eleccion-opciones">
+          <select id="input-columna-colores" class="input-columna-colores">
+            <option value="ninguno">Ninguno</option>
+            <option value="aclarar">Aclarar</option>
+            <option value="oscurecer">Oscurecer</option>
+            <option value="diferencia">Diferencia</option>
+            <option value="luminosidad">Luminosidad</option>
+            <option value="multiply">Multiplicar</option>
+          </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="filtros-control">
+      <h3 class="filtros-control-titulo">FILTROS</h3>
+      <div class="barra filtros">
+        <label for="barra-brillo">BRILLO</label>
+        <input class="barra-rango" type="range" id="barra-brillo" min="0" max="1" value="1" step="0.1">
+      </div>
+
+      <div class="opacidad filtros">
+        <label for="barra-opacidad">OPACIDAD</label>
+        <input class="barra-rango" type="range" id="barra-opacidad" min="0" max="1" value="1" step="0.1">
+      </div>
+
+      <div class="contraste filtros">
+        <label for="barra-contraste">CONTRASTE</label>
+        <input class="barra-rango" type="range" id="barra-contraste" min="100" max="1000" value="100">
+      </div>
+
+      <div class="desenfoque filtros">
+        <label for="barra-desenfoque">DESENFOQUE</label>
+        <input class="barra-rango" type="range" id="barra-desenfoque" min="0" max="10" value="0" step="0.1">
+      </div>
+
+      <div class="escala-grises filtros">
+        <label for="barra-escala-grises">ESCALA DE GRISES</label>
+        <input class="barra-rango" type="range" id="barra-escala-grises" min="0" max="100" value="0">
+      </div>
+
+      <div class="sepia filtros">
+        <label for="barra-sepia">SEPIA</label>
+        <input class="barra-rango" type="range" id="barra-sepia" min="0" max="100" value="0">
+      </div>
+
+      <div class="hue filtros">
+        <label for="barra-hue">HUE</label>
+        <input class="barra-rango" type="range" id="barra-hue" min="0" max="360" value="0">
+      </div>
+
+      <div class="saturado filtros">
+        <label for="barra-saturado">SATURADO</label>
+        <input class="barra-rango" type="range" id="barra-saturado" min="100" max="1000" value="100" step="10">
+      </div>
+
+      <div class="negativo filtros">
+        <label for="barra-negativo">NEGATIVO</label>
+        <input class="barra-rango" type="range" id="barra-negativo" min="0" max="1" value="0" step="0.1">
+      </div>
+    </div>
+
+    <button class="boton-restablecer" id="boton-restablecer">Restablecer filtros</button>
+
+  </aside>
+    <!-------------FIN COLUMNA IMG------------->
+
+    <!-------------COMIENZO COLUMNA TEXTO------------->
+    <aside class="columna-texto" id="columna-texto" onclick="mostrarColumnaTexto()">
+      <form>
+        <h2 class="titulo-aside-texto">TEXTO</h2>
+
+        <div class="div-aside">
+          <label class="label-superior" for="texto-superior">SUPERIOR</label>
+          <input type="text" id="texto-superior" value="Ingrese texto">
+        </div>
+
+        <div class="div-aside checkbox">
+          <label for="top-check"> Sin texto superior</label>
+          <input id="top-check" type="checkbox">
+        </div>
+
+        <div class="div-aside">
+          <label class="label-inferior" for="texto-inferior">INFERIOR</label>
+          <input type="text" id="texto-inferior" value="Ingrese texto inferior">
+        </div>
+
+        <div class="div-aside checkbox">
+          <label for="top-check-2"> Sin texto inferior</label>
+          <input id="top-check-2" type="checkbox">
+        </div>
+
+          <div class="div-aside">
+          <label class="label-fuentes" for="tipo-fuentes">FUENTE</label>
+            <select name="tipo-fuentes" id="tipo-fuentes">
+            <option value="arial">Arial</option>
+            <option value="arial-black">Arial Black</option>
+            <option value="american-typewriter">American Typewriter</option>
+            <option value="andale-mono">Andale Mono</option>
+            <option value="impact">Impact</option>
+            <option class="helvetica" value="helvetica">Helvetica</option>
+            </select>
+          </div>
+
+          <div class="estilos-fuente div-aside">
+            <input id="tamanio-letra" type="number" value="40" min="0" max="50">
+            <button id="izquierda"><i class="fa fa-align-left"></i></button>
+            <button id="centrar"><i class="fa fa-align-center"></i></button>
+            <button id="derecha"><i class="fa fa-align-right"></i></button>
+          </div>
+
+          <div class="estilos-fuente">
+          <div class="div-aside">
+            <label class="label-color" for="color-letra">COLOR</label>
+            <div class="color-botones div-aside">
+              <input type="color" id="color-letra" value="#000000">
+              <span id="colorTexto">#000000</span>
+          </div>
+          </div>
+
+          <div class="div-aside">
+            <label class="label-fondo" for="color-fondo">FONDO</label>
+            <div class="color-botones">
+              <input type="color" id="color-fondo" value="#ffffff">
+              <span id="fondoColor">#FFFFFF</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="div-aside checkbox">
+          <label for="transparente"> Fondo transparente</label>
+          <input type="checkbox" id="transparente">
+        </div>
+
+        <div class="div-aside">
+          <label class="label-contorno">CONTORNO</label>
+        </div>
+
+        <div class="botones-contorno div-aside">
+          <button id="botonNinguno"> Ninguno</button>
+          <button id="botonClaro"> Claro</button>
+          <button id="botonOscuro"> Oscuro</button>
+        </div>
+
+        <div class="div-aside">
+          <label class="label-espaciado" for="espaciado">ESPACIADO</label>
+          <input type="number" id="espaciado" value="15" onchange="espaciadoValor()">
+        </div>
+
+        <div class="div-aside">
+          <label class="label-interlineado" for="interlineado">INTERLINEADO</label>
+          <select name="interlineado" id="interlineado">
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+      </form>
+    </aside>
+  </section>
+  <!------------FIN COLUMNA TEXTO------------>
+
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
+
