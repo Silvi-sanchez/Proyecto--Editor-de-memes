@@ -48,13 +48,18 @@ body.cambiarModoOscuro{
     color: var(--color-titulo-header);
   }
   
+  .contenedor-header{
+    height: 17vh;
+    margin-top: 9px;
+  }
+
   .caja-principal{
     width: 80%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 83vh;
     background-image: url(https://www.solofondos.com/wp-content/uploads/2015/11/21omxpw.jpg);
     background: var(--color-caja-principal);
   }
@@ -80,7 +85,7 @@ body.cambiarModoOscuro{
 
   .contenedor-botones{
     margin-left: 29%;
-    margin-bottom: 11px;
+    margin-bottom: 18px;
     margin-top: 14px;
   }
 

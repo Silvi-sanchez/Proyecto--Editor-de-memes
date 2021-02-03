@@ -240,48 +240,47 @@ inputColumnaColores.addEventListener('change', actualizarTipoMezcla);
        //Aplicar filtros a la imagen
 //Brillo
 barraBrillo.addEventListener('change', () =>{
-  const rangoBrillo = barraBrillo.value;
-  centroTexto.style.filter = `brightness(${rangoBrillo})`;
+  aplicacionFiltros()
   });
+
 //Opacidad
 barraOpacidad.addEventListener('change', () =>{
-  const rangoOpacidad = barraOpacidad.value;
-  centroTexto.style.filter = `opacity(${rangoOpacidad})`;
+  aplicacionFiltros()
 });
+
 //Contraste
 barraContraste.addEventListener('change', () =>{
-  const rangoContraste = barraContraste.value;
-  centroTexto.style.filter = `contrast(${rangoContraste}%)`;
+  aplicacionFiltros()
 });
+
 //Desenfoque
 barraDesenfoque.addEventListener('change', () =>{
-  const rangoDesenfoque = barraDesenfoque.value;
-  centroTexto.style.filter = `blur(${rangoDesenfoque}px)`;
+  aplicacionFiltros();
 });
+
 //Escala de grises
 barraEscalaGrises.addEventListener('change', () =>{
-  const rangoGrises = barraEscalaGrises.value;
-  centroTexto.style.filter = `grayscale(${rangoGrises}%)`;
+  aplicacionFiltros();
 });
+
 //Sepia
 barraSepia.addEventListener('change', () =>{
-  const rangoSepia = barraSepia.value;
-  centroTexto.style.filter = `sepia(${rangoSepia}%)`;
+  aplicacionFiltros();
 });
+
 //Hue
 barraHue.addEventListener('change',() =>{
-  const rangoHue = barraHue.value;
-  centroTexto.style.filter = `hue-rotate(${rangoHue}deg)`;
+  aplicacionFiltros();
 });
+
 //Saturado
 barraSaturado.addEventListener('change', () =>{
-  const rangoSaturado = barraSaturado.value;
-  centroTexto.style.filter = `saturate(${rangoSaturado}%)`;
+  aplicacionFiltros();
 });
+
 //Negativo
 barraNegativo.addEventListener('change', () =>{
-  const rangoNegativo = barraNegativo.value;
-  centroTexto.style.filter = `invert(${rangoNegativo})`;
+  aplicacionFiltros();
 });
 
 //Reestablecer filtros
@@ -299,7 +298,11 @@ function restablecerFiltros() {
   barraNegativo.value = 0;
 
   cambiandoColoresImg();
-  centroTexto.style.filter = `brightness(${barraBrillo.value}) opacity(${barraOpacidad.value}) contrast(${barraContraste.value}%) blur(${barraDesenfoque}px) grayscale(${barraEscalaGrises.value}%) sepia(${barraSepia.value}%) hue-rotate(${barraHue.value}deg) saturate(${barraSaturado.value}%) invert(${ barraNegativo.value})`;
+  aplicacionFiltros()
+};
+
+function aplicacionFiltros() {
+  centroTexto.style.filter = `brightness(${barraBrillo.value}) opacity(${barraOpacidad.value}) contrast(${barraContraste.value}%) blur(${barraDesenfoque.value}px) grayscale(${barraEscalaGrises.value}%) sepia(${barraSepia.value}%) hue-rotate(${barraHue.value}deg) saturate(${barraSaturado.value}%) invert(${ barraNegativo.value})`;
 };
   
         //Boton descargar meme
