@@ -61,38 +61,30 @@ body.cambiarModoOscuro{
   
   .caja-seccion{
     height: 470px;
-    width: 100%;
-    margin-left: 25%;
-    max-width: 60%;
+    width: 60%;
     background-color: black;
     position: relative;
     display: flex;
     margin-top: 1.5%;
     flex-direction: column;
-    background-color: #000;
-    border: 1px solid black; 
   }
-  
+
   .titulo-header{
-    text-align: center;
     font-size: 36px;
     font-weight: 600;
-    margin: 10px;
+    margin-left: 27%;
     letter-spacing: -1px;
     font-family: cursive;
     color: var(--color-letras);
   }
 
   .contenedor-botones{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-left: 29%;
     margin-bottom: 11px;
     margin-top: 14px;
   }
 
   .boton-header-descargar{
-    margin-left: 22%;
     padding: 8px 8px 8px 8px;
     font-size: 15px;
     cursor: pointer;

@@ -41,7 +41,8 @@ const barraHue = document.getElementById('barra-hue');
 const barraSaturado = document.getElementById('barra-saturado');
 const barraNegativo = document.getElementById('barra-negativo');
 const botonRestablecer = document.getElementById('boton-restablecer');
-
+const botonDescargarMeme = document.getElementById('botonDescargarMeme');
+const contenedorMeme = document.getElementById('contenedorMeme');
 
          // Funciones cuando se carga la página
 window.onload = () => {
@@ -215,13 +216,25 @@ urlImg.addEventListener('keyup', (e) => {
 });
 
        //Aplicar color fondo a la imagen
-inputColores.addEventListener('input', (e) =>{
- const fondoImagen = e.target.value;
+inputColores.addEventListener('input', cambiandoColoresImg);
+
+function cambiandoColoresImg() {
+ const fondoImagen = inputColores.value;
  centroTexto.style.backgroundColor = fondoImagen ;
  spanColores.innerHTML = fondoImagen.toUpperCase();
-})
+};
 
        //Aplicar filtros al fondo de la imagen
+const actualizarColorMezcla = (evento) =>{
+  spanColores.innerText = evento.target.value.toUpperCase()
+  centroTexto.style.backgroundColor = evento.target.value;
+}
+const actualizarTipoMezcla = (evento) =>{
+  centroTexto.style.backgroundBlendMode = evento.target.value;
+}
+
+spanColores.addEventListener('input', actualizarColorMezcla);
+inputColumnaColores.addEventListener('change', actualizarTipoMezcla);
 
 
        //Aplicar filtros a la imagen
@@ -270,19 +283,28 @@ barraNegativo.addEventListener('change', () =>{
   const rangoNegativo = barraNegativo.value;
   centroTexto.style.filter = `invert(${rangoNegativo})`;
 });
+
 //Reestablecer filtros
-botonRestablecer.addEventListener('click', () =>{
+botonRestablecer.addEventListener('click', restablecerFiltros);
+
+function restablecerFiltros() {
   barraBrillo.value = 1;
   barraOpacidad.value = 1;
   barraContraste.value = 100;
   barraDesenfoque.value = 0;
-  barraEscalaGrises.value = 0;
+  barraEscalaGrises.value = 0;   
   barraSepia.value = 0;
   barraHue.value = 0;
   barraSaturado.value = 100;
   barraNegativo.value = 0;
-});
+
+  cambiandoColoresImg();
+  centroTexto.style.filter = `brightness(${barraBrillo.value}) opacity(${barraOpacidad.value}) contrast(${barraContraste.value}%) blur(${barraDesenfoque}px) grayscale(${barraEscalaGrises.value}%) sepia(${barraSepia.value}%) hue-rotate(${barraHue.value}deg) saturate(${barraSaturado.value}%) invert(${ barraNegativo.value})`;
+};
   
-
-
-
+        //Boton descargar meme
+const descargarMeme = () => {
+  domtoimage.toBlob(contenedorMeme).then(function (blob){
+  saveAs(blob, 'mi-meme.png')
+})
+}
