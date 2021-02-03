@@ -43,10 +43,14 @@ const barraNegativo = document.getElementById('barra-negativo');
 const botonRestablecer = document.getElementById('boton-restablecer');
 const botonDescargarMeme = document.getElementById('botonDescargarMeme');
 const contenedorMeme = document.getElementById('contenedorMeme');
+const panel = document.getElementById('panel');
+// const botonImagen = document.getElementById('boton-imagen');
+// const botonTexto = document.getElementById('boton-texto');
+
 
          // Funciones cuando se carga la página
 window.onload = () => {
-  espaciadoValor();
+  espaciadoValor()
   mostrarColumnaImg()
 };
 
@@ -240,17 +244,17 @@ inputColumnaColores.addEventListener('change', actualizarTipoMezcla);
        //Aplicar filtros a la imagen
 //Brillo
 barraBrillo.addEventListener('change', () =>{
-  aplicacionFiltros()
+  aplicacionFiltros();
   });
 
 //Opacidad
 barraOpacidad.addEventListener('change', () =>{
-  aplicacionFiltros()
+  aplicacionFiltros();
 });
 
 //Contraste
 barraContraste.addEventListener('change', () =>{
-  aplicacionFiltros()
+  aplicacionFiltros();
 });
 
 //Desenfoque
@@ -310,4 +314,32 @@ const descargarMeme = () => {
   domtoimage.toBlob(contenedorMeme).then(function (blob){
   saveAs(blob, 'mi-meme.png')
 })
+}
+
+        //Cerrar y mostrar paneles
+const ocultarColumna = () =>{
+  panel.classList.add('oculto');
+}
+const mostrarColumna = () =>{
+  panel.classList.remove('oculto');
+}
+const mostrarColumnaImagen = () =>{
+  columnaTexto.classList.add('oculto');
+  columnaImg.classList.remove('oculto');
+}
+const mostrarColumnaText = () =>{
+  columnaImg.classList.add('oculto');
+  columnaTexto.classList.remove('oculto');
+} 
+
+const inicializarPaneles = () => {
+  botonImagen.addEventListener('click', () => {
+    mostrarColumnaImagen()
+    mostrarColumna()
+  })
+  botonTexto.addEventListener('click', () => {
+    mostrarColumnaText()
+    mostrarColumna()
+  })
+  panel.addEventListener('click', ocultarColumna);
 }
