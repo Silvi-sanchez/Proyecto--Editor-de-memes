@@ -77,16 +77,18 @@ body.cambiarModoOscuro{
   .titulo-header{
     font-size: 36px;
     font-weight: 600;
-    margin-left: 27%;
+    width: 80%;
+    text-align: center;
     letter-spacing: -1px;
     font-family: cursive;
     color: var(--color-letras);
   }
 
   .contenedor-botones{
-    margin-left: 29%;
     margin-bottom: 18px;
     margin-top: 14px;
+    width: 80%;
+    text-align: center;
   }
 
   .boton-header-descargar{
@@ -173,7 +175,7 @@ body.cambiarModoOscuro{
   .columna-texto, .columna-img {
     width: 20%;
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     padding: 15px 15px;
@@ -424,38 +426,62 @@ body.cambiarModoOscuro{
 .boton-cerrar:hover{
   background-color: var(--color-input);;
 }
- 
-.oculto {
-  display: none;
-}
 
 
 /* RESPONSIVO*/
 
-@media (min-width: 1300px) {
-  .columna-img, .columna-texto {
+ @media (max-width: 1440px) {
+  .columna-img, .columna-texto   {
     display: block;
     box-shadow: none;
   }
-  .boton-cerrar-columna{
-    display: none;
-  }
-}
-
-@media (max-width: 1300px ) {
-  .columna-img, .columna-texto {
-    width: 23%;
-  }
+  .boton-cerrar {
+    display: block;
+  } 
+} 
 
 @media (max-width: 768px) {
-  .titulo-header {
-    font-size: 26px;
-  }
   .columna-img, .columna-texto  {
+    display: block;
+    box-shadow: none;
+    width: 40%;
+  }
+  .primer-texto, .segundo-texto{
+    z-index: 0;
+    font-size: 23px;
+  }
+  .boton-cerrar {
+    display: block;
+  } 
+  .caja-seccion {
+    height: 400px;
+    margin-top: 4%;
+}
+
+@media (max-width: 500px){
+  .titulo-header{
+    font-size: 26px;
+    width: 100%;
+  }
+  .columna-img, .columna-texto   {
+    width: 100%;
+    display: block;
+    box-shadow: none;
+  }
+  .contenedor-botones{
+    width: 100%;
+  }
+  .contenedor-header{
     width: 100%;
   }
   .primer-texto, .segundo-texto{
     z-index: 0;
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .caja-seccion {
+    height: 320px;
+    width: 75%;
+    margin-top: 20%;
   }
 }
-

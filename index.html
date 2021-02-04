@@ -18,8 +18,8 @@
 
     <!-------------COMIENZO HEADER------------->
   <header class="contenedor-header">
-    <h1 class="titulo-header">Generador de memes</h1>
-    <div class="contenedor-botones">
+    <h1 class="titulo-header" id="tituloHeader">Generador de memes</h1>
+    <div class="contenedor-botones" id="contenedorBotones">
       <button class="boton-header" id="boton-imagen" onclick="ocultarMostrarImagen()" aria-label="columna imagen"><i class="fa fa-image"></i> Imagen</button>
       <button class="boton-header" id="boton-texto" onclick="ocultarMostrarTexto()" aria-label="columna texto"><i class="fa fa-font"></i> Texto</button>
       <button class="boton-header modo-oscuro" id="modo-oscuro" onclick="cambioAModoOscuro()" aria-label="cambiar a modo oscuro"><i class="fa fa-moon"></i> Modo oscuro</button>
@@ -31,7 +31,7 @@
 
   <section class="principio-main">
     <!-------------COMIENZO MAIN------------->
-    <main class="caja-principal">
+    <main class="caja-principal" id="cajaPrincipal">
       <section class="caja-seccion" id="contenedorMeme">
         <article id="primer-texto" class="primer-texto">TOP TEXT</article>
         <article id="centro-texto" class="centro-imagen"></article>
@@ -44,7 +44,7 @@
 
 
     <!-------------COMIENZO COLUMNA IMG------------->
-    <aside class="columna-img" id="columna-img" onclick="mostrarColumnaImg()">
+    <aside class="columna-img" id="columna-img">
       <button class="boton-cerrar" id="boton-cerrar-img" aria-label="Cerrar columna">
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
@@ -130,7 +130,7 @@
     <!-------------FIN COLUMNA IMG------------->
 
     <!-------------COMIENZO COLUMNA TEXTO------------->
-    <aside class="columna-texto" id="columna-texto" onclick="mostrarColumnaTexto()">
+    <aside class="columna-texto" id="columna-texto">
         <button class="boton-cerrar" id="boton-cerrar-texto" aria-label="Cerrar columna">
           <i class="fas fa-times" aria-hidden="true"></i>
         </button>

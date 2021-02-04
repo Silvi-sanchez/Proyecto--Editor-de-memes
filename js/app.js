@@ -44,8 +44,11 @@ const botonRestablecer = document.getElementById('boton-restablecer');
 const botonDescargarMeme = document.getElementById('botonDescargarMeme');
 const contenedorMeme = document.getElementById('contenedorMeme');
 const panel = document.getElementById('panel');
-// const botonImagen = document.getElementById('boton-imagen');
-// const botonTexto = document.getElementById('boton-texto');
+const botonCerrarImg = document.getElementById('boton-cerrar-img');
+const botonCerrarTexto = document.getElementById('boton-cerrar-texto');
+const cajaPrincipal = document.getElementById('cajaPrincipal');
+const tituloHeader = document.getElementById('tituloHeader');
+const contenedorBotones = document.getElementById('contenedorBotones');
 
 
          // Funciones cuando se carga la página
@@ -80,11 +83,17 @@ function cambioAModoOscuro(){
 function ocultarMostrarImagen(){
   columnaImg.style.display = '';
   columnaTexto.style.display = 'none';
+  cajaPrincipal.style.width = '80%'
+  tituloHeader.style.width = '80%'
+  contenedorBotones.style.width ='80%'
 }
        //Botones para mostrar aside texto
 function ocultarMostrarTexto(){
   columnaTexto.style.display = '';
   columnaImg.style.display = 'none';
+  cajaPrincipal.style.width = '80%'
+  tituloHeader.style.width = '80%'
+  contenedorBotones.style.width ='80%'
 }
 
         //Escribir texto superior
@@ -317,29 +326,17 @@ const descargarMeme = () => {
 }
 
         //Cerrar y mostrar paneles
-const ocultarColumna = () =>{
-  panel.classList.add('oculto');
-}
-const mostrarColumna = () =>{
-  panel.classList.remove('oculto');
-}
-const mostrarColumnaImagen = () =>{
-  columnaTexto.classList.add('oculto');
-  columnaImg.classList.remove('oculto');
-}
-const mostrarColumnaText = () =>{
-  columnaImg.classList.add('oculto');
-  columnaTexto.classList.remove('oculto');
-} 
+  botonCerrarImg.addEventListener('click', () => {
+    ocultarColumnas() 
+  })
+  botonCerrarTexto.addEventListener('click', () => {
+    ocultarColumnas()
+  })
 
-const inicializarPaneles = () => {
-  botonImagen.addEventListener('click', () => {
-    mostrarColumnaImagen()
-    mostrarColumna()
-  })
-  botonTexto.addEventListener('click', () => {
-    mostrarColumnaText()
-    mostrarColumna()
-  })
-  panel.addEventListener('click', ocultarColumna);
-}
+  function ocultarColumnas(){
+    columnaImg.style.display = 'none';
+    columnaTexto.style.display = 'none';
+    cajaPrincipal.style.width = '100%';
+    tituloHeader.style.width = '100%'
+    contenedorBotones.style.width ='100%'
+  }
