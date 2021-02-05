@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width">
   <meta name="author" content="Silvina Sánchez">
   <meta name="description" content="Proyecto editor de memes realizado como evaluación final del módulo de ADA">
+  <meta name="keywords" content="Proyecto, Editor de memes, Front End, Programación, ADA">
+  <!-- Links -->
   <link rel="shortcut icon" href="./img/icono.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
@@ -16,7 +18,7 @@
 <body class="cambiarModoOscuro">
 
 
-    <!-------------COMIENZO HEADER------------->
+  <!-------------****COMIENZO HEADER****------------->
   <header class="contenedor-header">
     <h1 class="titulo-header" id="tituloHeader">Generador de memes</h1>
     <div class="contenedor-botones" id="contenedorBotones">
@@ -26,11 +28,12 @@
       <button class="boton-header modo-claro" id="modo-claro" onclick="cambioAModoClaro()" aria-label="cambiar a modo claro"><i class="fa fa-sun"></i> Modo claro</button>
     </div>
   </header>
-    <!-------------FIN DE HEADER------------->
+  <!-------------****FIN DE HEADER****------------->
 
 
   <section class="principio-main">
-    <!-------------COMIENZO MAIN------------->
+
+    <!-------------****COMIENZO MAIN****------------->
     <main class="caja-principal" id="cajaPrincipal">
       <section class="caja-seccion" id="contenedorMeme">
         <article id="primer-texto" class="primer-texto">TOP TEXT</article>
@@ -39,22 +42,23 @@
       </section>
       <button class="boton-header-descargar" id="botonDescargarMeme" aria-label="descargar meme" onclick="descargarMeme()"><i class="fas fa-arrow-circle-down"></i> Descargar meme</button>
     </main>
-    
-    <!-------------FIN DE MAIN------------->
+    <!-------------****FIN DE MAIN****------------->
 
 
-    <!-------------COMIENZO COLUMNA IMG------------->
+    <!-------------****COMIENZO COLUMNA IMAGEN****------------->
     <aside class="columna-img" id="columna-img">
       <button class="boton-cerrar" id="boton-cerrar-img" aria-label="Cerrar columna">
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
         <h2 class="titulo-aside-img">IMAGEN</h2>
         
+        <!-- Aplicación de URL-->
         <div class="div-aside-img">
           <h3 class="titulo-url-img" id="url-img">URL</h3>
           <input type="text" class="url-img" id="urlImg" aria-label="URL de imagen">
         </div>
         
+        <!-- Aplicación de color fondo URL-->
         <div class="fondo">
         <h3 class="color-fondo-url">FONDO</h3>
         <div class="div-color-fondo">
@@ -63,6 +67,7 @@
             <span id="spanColores" aria-hidden="true">#FFFFFF</span>
           </div>
 
+        <!-- Aplicación de filtros sobre el color aplicado a la URL-->
         <div class="div-eleccion-opciones">
           <select id="input-columna-colores" class="input-columna-colores">
             <option value="normal">Ninguno</option>
@@ -76,6 +81,7 @@
         </div>
       </div>
       
+      <!-- Aplicación de distintos filtros-->
       <div class="filtros-control">
       <h3 class="filtros-control-titulo">FILTROS</h3>
       <div class="barra filtros">
@@ -123,23 +129,25 @@
         <input class="barra-rango" type="range" id="barra-negativo" min="0" max="1" value="0" step="0.1">
       </div>
     </div>
-
+    <!-- Aplicación de botón restablecer filtros-->
     <button class="boton-restablecer" id="boton-restablecer">Restablecer filtros</button>
 
   </aside>
-    <!-------------FIN COLUMNA IMG------------->
+  <!-------------****FIN COLUMNA IMAGEN****------------->
 
-    <!-------------COMIENZO COLUMNA TEXTO------------->
+
+    <!-------------****COMIENZO COLUMNA TEXTO****------------->
     <aside class="columna-texto" id="columna-texto">
         <button class="boton-cerrar" id="boton-cerrar-texto" aria-label="Cerrar columna">
           <i class="fas fa-times" aria-hidden="true"></i>
         </button>
       <form>
         <h2 class="titulo-aside-texto">TEXTO</h2>
-
+        
+        <!-- Aplicación de texto superior y check sin texto-->
         <div class="div-aside">
           <label class="label-superior" for="texto-superior">SUPERIOR</label>
-          <input type="text" id="texto-superior" value="Ingrese texto">
+          <input type="text" id="texto-superior" value="TOP TEXT">
         </div>
 
         <div class="div-aside checkbox">
@@ -147,9 +155,10 @@
           <input id="top-check" type="checkbox">
         </div>
 
+        <!-- Aplicación de texto inferior y check sin texto-->
         <div class="div-aside">
           <label class="label-inferior" for="texto-inferior">INFERIOR</label>
-          <input type="text" id="texto-inferior" value="Ingrese texto inferior">
+          <input type="text" id="texto-inferior" value="BOTTOM TEXT">
         </div>
 
         <div class="div-aside checkbox">
@@ -157,6 +166,7 @@
           <input id="top-check-2" type="checkbox">
         </div>
 
+          <!-- Tipos de fuentes -->
           <div class="div-aside">
           <label class="label-fuentes" for="tipo-fuentes">FUENTE</label>
             <select name="tipo-fuentes" id="tipo-fuentes">
@@ -169,6 +179,7 @@
             </select>
           </div>
 
+          <!-- Tamaño y posición de texto -->
           <div class="estilos-fuente div-aside">
             <input id="tamanio-letra" type="number" value="40" min="0" max="50">
             <button id="izquierda"><i class="fa fa-align-left"></i></button>
@@ -176,6 +187,7 @@
             <button id="derecha"><i class="fa fa-align-right"></i></button>
           </div>
 
+          <!-- Color de fuente -->
           <div class="estilos-fuente">
           <div class="div-aside">
             <label class="label-color" for="color-letra">COLOR</label>
@@ -185,6 +197,7 @@
           </div>
           </div>
 
+          <!-- Color de fondo -->
           <div class="div-aside">
             <label class="label-fondo" for="color-fondo">FONDO</label>
             <div class="color-botones">
@@ -194,26 +207,30 @@
           </div>
         </div>
 
+          <!-- Aplicación fondo transparente -->
         <div class="div-aside checkbox">
           <label for="transparente"> Fondo transparente</label>
           <input type="checkbox" id="transparente">
         </div>
 
+          <!-- Aplicación de contornos -->
         <div class="div-aside">
           <label class="label-contorno">CONTORNO</label>
         </div>
 
         <div class="botones-contorno div-aside">
-          <button id="botonNinguno"> Ninguno</button>
-          <button id="botonClaro"> Claro</button>
-          <button id="botonOscuro"> Oscuro</button>
+          <button id="botonNinguno" aria-label="Boton ninguno"> Ninguno</button>
+          <button id="botonClaro" aria-label="Boton claro"> Claro</button>
+          <button id="botonOscuro" aria-label="Boton oscuro"> Oscuro</button>
         </div>
 
+        <!-- Aplicación de espaciado -->
         <div class="div-aside">
           <label class="label-espaciado" for="espaciado">ESPACIADO</label>
           <input type="number" id="espaciado" value="15" onchange="espaciadoValor()">
         </div>
 
+        <!-- Aplicación de interlineado-->
         <div class="div-aside">
           <label class="label-interlineado" for="interlineado">INTERLINEADO</label>
           <select name="interlineado" id="interlineado">
@@ -227,7 +244,7 @@
       </form>
     </aside>
   </section>
-  <!------------FIN COLUMNA TEXTO------------>
+  <!------------****FIN COLUMNA TEXTO****------------>
 
 
   <script src="./js/app.js"></script>

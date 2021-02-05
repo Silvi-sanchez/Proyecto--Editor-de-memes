@@ -78,7 +78,6 @@ function cambioAModoOscuro(){
   document.body.classList.add('cambiarModoOscuro');
 }
 
-
         //Botones para mostrar aside imagen
 function ocultarMostrarImagen(){
   columnaImg.style.display = '';
@@ -207,7 +206,7 @@ botonOscuro.addEventListener('click', (e) =>  {
 
          //Aplicar espaciado al texto
 const espaciadoValor = () => {
-  let valorEspaciado = espaciado.value;
+  const valorEspaciado = espaciado.value;
   primerTexto.style.padding = `${valorEspaciado}px 50px`;
   segundoTexto.style.padding = `${valorEspaciado}px 50px`;
 }
@@ -332,7 +331,6 @@ const descargarMeme = () => {
   botonCerrarTexto.addEventListener('click', () => {
     ocultarColumnas()
   })
-
   function ocultarColumnas(){
     columnaImg.style.display = 'none';
     columnaTexto.style.display = 'none';

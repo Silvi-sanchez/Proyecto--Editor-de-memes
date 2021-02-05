@@ -43,6 +43,18 @@ Si querés tener el código en tu computadora, deberás seguir estos pasos en tu
 
 ***
 
+## Además, en las siguientes imágenes podrá observar algunos Pseudocódigos y DFD, aprendido en el módulo 3.
+<br>
+
+![Imagen](/img/Pseudocodigo-y-DFD-URL-imagen.png)
+<br> 
+
+![Imagen](/img/Pseudocodigo-y-DFD-Interlineado.png)
+
+<br> 
+
+***
+
 ### Agradezco a:
 # -Mi profesor por su predisposición y ayuda cuando lo necesite [Jonh Parra](https://github.com/Jonhks) y a la colaboración de [Leydi.](https://github.com/leydyk93/)
 
