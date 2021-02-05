@@ -80,7 +80,7 @@ body.cambiarModoOscuro{
     width: 80%;
     text-align: center;
     letter-spacing: -1px;
-    font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;
     color: var(--color-letras);
   }
 
@@ -197,7 +197,7 @@ body.cambiarModoOscuro{
     width: 100%;
     font-size: 20px;
     text-align: center;
-    font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;;
   }
 
   .div-aside{
