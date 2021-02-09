@@ -49,7 +49,7 @@ body{
 }
   
 .contenedor-header{
-  height: 17vh;
+  height: 15vh;
   margin-top: 9px;
 }
 
@@ -65,12 +65,12 @@ body{
 }
   
 .caja-seccion{
-  min-height: 450px;
+  height: 470px;
+  min-height: 400px;
   width: 60%;
   background-color: black;
   position: relative;
   display: flex;
-  margin-top: 1.5%;
   flex-direction: column;
 }
 
@@ -142,7 +142,7 @@ body{
   width: 100%;
   color: black;
   text-align: center;
-  padding: 25px 50px;
+  padding: 17px 50px;
   font-size: 40px;
   top: 0;
   font-weight: 800;
@@ -151,7 +151,7 @@ body{
 }
 
 .centro-imagen{
-  height: 60%;
+  height: 55%;
   padding: 20%;
   background-color: black;
   width: 100%;
@@ -164,7 +164,7 @@ body{
   color: black;
   bottom: 0;
   text-align: center;
-  padding: 25px 50px;
+  padding: 17px 50px;
   position: absolute;
   font-size: 40px;
   font-weight: 800;
@@ -432,7 +432,7 @@ label{
 
 /* -----RESPONSIVO------*/
 
- @media (max-width:1440px) {
+@media(min-width:1050px) and (max-width:1440px) {
   .columna-img, .columna-texto   {
     display: block;
     box-shadow: none;
@@ -446,7 +446,7 @@ label{
   }
 } 
 
-@media (max-width:1050px) {
+@media all and (max-width:1050px) {
   .columna-img, .columna-texto  {
     display: block;
     box-shadow: none;
@@ -460,26 +460,29 @@ label{
     display: block;
   } 
   .caja-seccion {
-    height: 400px;
-    margin-top: 4%;
+    height: 100px;
   }
   .contenedor-header{
-    height: 17vh;
+    height: 19vh;
   }
 }
 
-@media (min-width: 581px) and (max-width: 761px){
+@media (min-width: 571px) and (max-width: 760px){
+  
   .columna-img, .columna-texto   {
     width: 100%;
     display: block;
     box-shadow: none;
   }
   .contenedor-header{
-    height: 17vh;
+    height: 19vh;
+  }
+  .caja-seccion {
+    width: 80%;
   }
 }
 
-@media (max-width: 580px){
+@media (max-width: 570px){
   .titulo-header{
     font-size: 26px;
     width: 100%;
@@ -499,6 +502,8 @@ label{
   }
   .caja-seccion {
     width: 80%;
-    margin-top: 8%;
+  }
+  .contenedor-header{
+    height: 17vh;
   }
 }

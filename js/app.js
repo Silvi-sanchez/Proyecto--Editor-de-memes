@@ -53,7 +53,6 @@ const contenedorBotones = document.getElementById('contenedorBotones');
 
          // Funciones cuando se carga la página
 window.onload = () => {
-  espaciadoValor()
   mostrarColumnaImg()
 };
 
@@ -205,11 +204,11 @@ botonOscuro.addEventListener('click', (e) =>  {
 })
 
          //Aplicar espaciado al texto
-const espaciadoValor = () => {
+espaciado.addEventListener('click', () =>{
   const valorEspaciado = espaciado.value;
   primerTexto.style.padding = `${valorEspaciado}px 50px`;
   segundoTexto.style.padding = `${valorEspaciado}px 50px`;
-}
+})
  
         //Aplicar interlineado al texto
 interlineado.addEventListener('change', () =>{
@@ -217,6 +216,7 @@ interlineado.addEventListener('change', () =>{
   primerTexto.style.lineHeight = valorInterlineado;
   segundoTexto.style.lineHeight = valorInterlineado;
 })
+  
 
        //Aplicar URL
 urlImg.addEventListener('keyup', (e) => {
@@ -227,6 +227,7 @@ urlImg.addEventListener('keyup', (e) => {
   centroTexto.style.backgroundSize = 'cover';
 });
 
+
        //Aplicar color fondo a la imagen
 inputColores.addEventListener('input', cambiandoColoresImg);
 
@@ -235,6 +236,7 @@ function cambiandoColoresImg() {
  centroTexto.style.backgroundColor = fondoImagen ;
  spanColores.innerHTML = fondoImagen.toUpperCase();
 };
+
 
        //Aplicar filtros al fondo de la imagen
 const actualizarColorMezcla = (evento) =>{
