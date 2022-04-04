@@ -432,7 +432,7 @@ label{
 
 /* -----RESPONSIVO------*/
 
-@media(min-width:1050px) and (max-width:1440px) {
+@media(min-width:1050px) and (max-width:2560px) {
   .columna-img, .columna-texto   {
     display: block;
     box-shadow: none;
