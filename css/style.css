@@ -247,6 +247,8 @@ body{
   border-radius: 7px;
   background-color: var(--color-input);
   width: 6.5em;
+  display: flex;
+  align-items: center;
 }
 
 .filtros{
@@ -281,6 +283,7 @@ body{
   width: 1.5em;
   background-color: var(--color-input);
   margin-left: 2px;
+  height: 23px;
 }
   
 .color-fondo-url, .filtros-control-titulo{
