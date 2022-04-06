@@ -354,6 +354,7 @@ body{
   
 .color-botones{
   display: flex;
+  align-items: center;
   flex-direction: row !important;
   margin: 1% !important;
   width: 100% !important;
