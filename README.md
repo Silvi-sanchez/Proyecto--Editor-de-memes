@@ -1,6 +1,6 @@
 # Proyecto: Editor de memes por Silvina Sánchez!
 
-### Este proyecto fue realizado como evaluación final del segundo módulo de ADA. Donde se muestran los conocimientos obtenidos en este módulo en base a JavaScript. Utilizamos HTML, CSS y **JavaScript** para darle vida al proyecto a través de nuevos desafíos. 
+### Este proyecto fue realizado en base a JavaScript. Utilizamos HTML, CSS y **JavaScript** para darle vida al proyecto a través de nuevos desafíos. 
 
 ### Este proyecto cuenta con dos modos de visualización, que el usuario podrá alegir, modo oscuro y modo claro, y también es un proyecto responsivo.  
 
@@ -55,9 +55,4 @@ Si querés tener el código en tu computadora, deberás seguir estos pasos en tu
 
 ***
 
-### Agradezco a:
-# -Mi profesor por su predisposición y ayuda cuando lo necesite [Jonh Parra](https://github.com/Jonhks) y a la colaboración de [Leydi.](https://github.com/leydyk93/)
-
-<br>
-
-### Por [Silvina Sánchez](https://github.com/Silvi-sanchez) ❤️
+### Por [Silvina Sánchez](https://github.com/Silvi-sanchez) 
