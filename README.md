@@ -6,7 +6,7 @@
 
 <br>
 
-### Podés observar como quedó dándole click a este [enlace](https://silvi-sanchez.github.io/Proyecto--Editor-de-memes--ADA/)
+### Podés observar como quedó dándole click a este [enlace](https://charming-bunny-bfc92c.netlify.app/)
 
 <br>
 
@@ -43,7 +43,7 @@ Si querés tener el código en tu computadora, deberás seguir estos pasos en tu
 
 ***
 
-## Además, en las siguientes imágenes podrá observar algunos Pseudocódigos y DFD, aprendido en el módulo 3.
+## Además, en las siguientes imágenes podrá observar algunos Pseudocódigos y DFD.
 <br>
 
 ![Imagen](/img/Pseudocodigo-y-DFD-URL-imagen.png)
